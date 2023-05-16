@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>Flyingdarts.Infrastructure.Constructs</Title>
-		<VersionPrefix>1.0.0.1</VersionPrefix>
+		<VersionPrefix>1.0.1</VersionPrefix>
 		<Version>$(VersionPrefix)</Version>
 		<PackageId>Flyingdarts.Infrastructure.Constructs</PackageId>
 		<Authors>Flyingdarts</Authors>
