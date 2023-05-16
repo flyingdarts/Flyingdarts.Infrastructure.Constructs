@@ -39,7 +39,7 @@ public class AuthConstruct : Construct
                                 }),
                                 new PolicyStatement(new PolicyStatementProps {
                                     Effect = Effect.ALLOW,
-                                    Actions = new string[] {
+                                    Actions = repository == "Flyingdarts.Infrastructure" ? new string[] { "cloudformation:DescribeStacks" } : new string[] {
                                         "iam:ListRoles",
                                         "lambda:GetFunctionConfiguration",
                                         "lambda:UpdateFunctionConfiguration",
