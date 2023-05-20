@@ -1,10 +1,13 @@
-﻿public class BackendConstruct : Construct
+﻿using Amazon.CDK.AWS.SQS;
+using Flyingdarts.Shared;
+
+public class BackendConstruct : Construct
 {
     private Table SignallingTable { get; }
     private WebSocketApi Api { get; }
     private WebSocketStage Stage { get; }
     private Table ApplicationTable { get; }
-    public BackendConstruct(Construct scope, string id, string[] repositories) : base(scope, id)
+    public BackendConstruct(Construct scope, string id, string[] repositories, Dictionary<string, string> stuff) : base(scope, id)
     {
         // Setup the signalling table and functions
         SignallingTable = new Table(this, "Flyingdarts-Signalling-Table", new TableProps
@@ -44,7 +47,7 @@
                 Integration = new WebSocketLambdaIntegration("Flyingdarts-Backend-Api-OnDisconnect-Integration", OnDisconnect)
             }
         });
-        
+
         // Create a development stage
         Stage = new WebSocketStage(this, "Stage", new WebSocketStageProps
         {
@@ -56,7 +59,7 @@
 
         OnDefault.AddEnvironment("WebSocketApiUrl", Stage.Url);
         Stage.GrantManagementApiAccess(OnDefault);
-        
+
 
         ApplicationTable = new Table(this, "Flyingdarts-Application-Table", new TableProps
         {
@@ -104,6 +107,22 @@
                 }
             });
 
+            if (functionName == "Flyingdarts.Backend.User.Profile.Update")
+            {
+                lambda.AddToRolePolicy(new PolicyStatement(new PolicyStatementProps
+                {
+                    Actions = new[]
+                    {
+                        "sqs:SendMessage"
+                    },
+                    Resources = new[]
+                    {
+                        stuff["QueueArn"]
+                    }
+                }));
+                lambda.AddEnvironment("SqsQueueUrl", stuff["QueueUrl"]);
+            }
+
             var pathComponents = functionName.Split(".");
             pathComponents = pathComponents.TakeLast(pathComponents.Length - 2).ToArray();
             var routeKey = string.Join("/", pathComponents.Prepend("v2")).ToLower();
@@ -125,10 +144,11 @@
             lambda.AddEnvironment("WebSocketApiUrl", Stage.Url);
         }
 
-        
+
         new CfnOutput(this, "WebSocketUrlCfnOutput", new CfnOutputProps
         {
-            ExportName = "WebSocketApiUrl", Value = Stage.Url
+            ExportName = "WebSocketApiUrl",
+            Value = Stage.Url
         });
 
         // Create a parameter in the Systems Manager Parameter Store

@@ -39,11 +39,18 @@ public class AuthConstruct : Construct
                                 }),
                                 new PolicyStatement(new PolicyStatementProps {
                                     Effect = Effect.ALLOW,
-                                    Actions = repository == "Flyingdarts.Infrastructure" ? new string[] { "cloudformation:DescribeStacks" } : new string[] {
-                                        "iam:ListRoles",
-                                        "lambda:GetFunctionConfiguration",
-                                        "lambda:UpdateFunctionConfiguration",
-                                        "lambda:UpdateFunctionCode" },
+                                    Actions =
+                                        repository == "Flyingdarts.Infrastructure"
+                                            ? new string[]
+                                            {
+                                                "cloudformation:DescribeStacks"
+                                            }
+                                            : new string[] {
+                                                "iam:ListRoles",
+                                                "lambda:GetFunctionConfiguration",
+                                                "lambda:UpdateFunctionConfiguration",
+                                                "lambda:UpdateFunctionCode"
+                                            },
                                     Resources = new string[] { "*" }
                                 })
                             }
