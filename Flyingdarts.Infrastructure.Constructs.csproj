@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>Flyingdarts.Infrastructure.Constructs</Title>
-		<VersionPrefix>1.0.1.4</VersionPrefix>
+		<VersionPrefix>1.0.1.5</VersionPrefix>
 		<Version>$(VersionPrefix)</Version>
 		<PackageId>Flyingdarts.Infrastructure.Constructs</PackageId>
 		<Authors>Flyingdarts</Authors>
@@ -19,12 +19,6 @@
 		<PackageReleaseNotes>Added Communication construct for sending emails</PackageReleaseNotes>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
-
-	<ItemGroup>
-	  <None Remove="icon.png" />
-	  <None Remove="LICENSE.md" />
-	  <None Remove="README.md" />
-	</ItemGroup>
 
 	<ItemGroup>
 	  <Content Include="icon.png">
