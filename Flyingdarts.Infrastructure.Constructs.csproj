@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -16,7 +16,7 @@
 		<LicenseFile>LICENSE.md</LicenseFile>
 		<PackageTags>Flyingdarts Backend Constructs</PackageTags>
 		<PackageIcon>icon.png</PackageIcon>
-		<PackageReleaseNotes>Public release</PackageReleaseNotes>
+		<PackageReleaseNotes>Added Communication construct for sending emails</PackageReleaseNotes>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
