@@ -6,11 +6,11 @@
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>Flyingdarts.Infrastructure.Constructs</Title>
-		<VersionPrefix>1.0.1.5</VersionPrefix>
+		<VersionPrefix>1.0.1.6</VersionPrefix>
 		<Version>$(VersionPrefix)</Version>
 		<PackageId>Flyingdarts.Infrastructure.Constructs</PackageId>
 		<Authors>Flyingdarts</Authors>
-		<Description>A NuGet package with IaC Constructs for the flyingdarts backend</Description>
+		<Description>Added an extra function to update a user's connection id.</Description>
 		<PackageProjectUrl>https://github.com/flyingdarts/Flyingdarts.Infrastructure.Constructs</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/flyingdarts/Flyingdarts.Infrastructure.Constructs.git</RepositoryUrl>
 		<LicenseFile>LICENSE.md</LicenseFile>
@@ -39,11 +39,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Amazon.CDK.AWS.Amplify.Alpha" Version="2.80.0-alpha.0" />
-	  <PackageReference Include="Amazon.CDK.AWS.APIGatewayv2.Alpha" Version="2.80.0-alpha.0" />
-	  <PackageReference Include="Amazon.CDK.AWS.APIGatewayv2.Integrations.Alpha" Version="2.80.0-alpha.0" />
-	  <PackageReference Include="Amazon.CDK.Lib" Version="2.80.0" />
-	  <PackageReference Include="Constructs" Version="10.2.31" />
+	  <PackageReference Include="Amazon.CDK.AWS.Amplify.Alpha" Version="2.84.0-alpha.0" />
+	  <PackageReference Include="Amazon.CDK.AWS.APIGatewayv2.Alpha" Version="2.84.0-alpha.0" />
+	  <PackageReference Include="Amazon.CDK.AWS.APIGatewayv2.Integrations.Alpha" Version="2.84.0-alpha.0" />
+	  <PackageReference Include="Amazon.CDK.Lib" Version="2.84.0" />
+	  <PackageReference Include="Constructs" Version="10.2.52" />
 	  <PackageReference Include="Flyingdarts.Shared" Version="1.0.2.8" />
 	</ItemGroup>
 </Project>

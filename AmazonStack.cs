@@ -19,7 +19,8 @@ public class AmazonStack : Stack
             "Flyingdarts.Backend.User.Profile.Create",
             "Flyingdarts.Backend.User.Profile.Get",
             "Flyingdarts.Backend.User.Profile.Update",
-            "Flyingdarts.Backend.User.Profile.VerifyEmail"
+            "Flyingdarts.Backend.User.Profile.VerifyEmail",
+            "Flyingdarts.Backend.User.UpdateConnectionId"
         };
 
         var endpoints = functions
