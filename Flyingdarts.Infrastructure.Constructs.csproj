@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -43,7 +43,7 @@
 	  <PackageReference Include="Amazon.CDK.AWS.APIGatewayv2.Alpha" Version="2.84.0-alpha.0" />
 	  <PackageReference Include="Amazon.CDK.AWS.APIGatewayv2.Integrations.Alpha" Version="2.84.0-alpha.0" />
 	  <PackageReference Include="Amazon.CDK.Lib" Version="2.84.0" />
-	  <PackageReference Include="Constructs" Version="10.2.52" />
+	  <PackageReference Include="Constructs" Version="10.2.55" />
 	  <PackageReference Include="Flyingdarts.Shared" Version="1.0.2.8" />
 	</ItemGroup>
 </Project>
