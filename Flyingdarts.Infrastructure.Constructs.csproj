@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -6,17 +6,17 @@
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>Flyingdarts.Infrastructure.Constructs</Title>
-		<VersionPrefix>1.0.1.6</VersionPrefix>
+		<VersionPrefix>1.0.2</VersionPrefix>
 		<Version>$(VersionPrefix)</Version>
 		<PackageId>Flyingdarts.Infrastructure.Constructs</PackageId>
 		<Authors>Flyingdarts</Authors>
-		<Description>Added an extra function to update a user's connection id.</Description>
+		<Description>A package with Constructs for the Flyingdarts infrastructure in AWS Cloud</Description>
 		<PackageProjectUrl>https://github.com/flyingdarts/Flyingdarts.Infrastructure.Constructs</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/flyingdarts/Flyingdarts.Infrastructure.Constructs.git</RepositoryUrl>
 		<LicenseFile>LICENSE.md</LicenseFile>
 		<PackageTags>Flyingdarts Backend Constructs</PackageTags>
 		<PackageIcon>icon.png</PackageIcon>
-		<PackageReleaseNotes>Added Communication construct for sending emails</PackageReleaseNotes>
+		<PackageReleaseNotes>Update package references</PackageReleaseNotes>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
@@ -39,11 +39,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Amazon.CDK.AWS.Amplify.Alpha" Version="2.84.0-alpha.0" />
-	  <PackageReference Include="Amazon.CDK.AWS.APIGatewayv2.Alpha" Version="2.84.0-alpha.0" />
-	  <PackageReference Include="Amazon.CDK.AWS.APIGatewayv2.Integrations.Alpha" Version="2.84.0-alpha.0" />
-	  <PackageReference Include="Amazon.CDK.Lib" Version="2.90.0" />
-	  <PackageReference Include="Constructs" Version="10.2.52" />
-	  <PackageReference Include="Flyingdarts.Shared" Version="1.0.2.8" />
+	  <PackageReference Include="Amazon.CDK.AWS.Amplify.Alpha" Version="2.99.1-alpha.0" />
+	  <PackageReference Include="Amazon.CDK.AWS.APIGatewayv2.Alpha" Version="2.99.1-alpha.0" />
+	  <PackageReference Include="Amazon.CDK.AWS.APIGatewayv2.Integrations.Alpha" Version="2.99.1-alpha.0" />
+	  <PackageReference Include="Amazon.CDK.Lib" Version="2.99.1" />
+	  <PackageReference Include="Constructs" Version="10.2.70" />
+	  <PackageReference Include="Flyingdarts.Shared" Version="1.0.4" />
 	</ItemGroup>
 </Project>
